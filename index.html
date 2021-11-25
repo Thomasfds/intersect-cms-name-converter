@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/css/uikit.min.css" />
+    <title>Intersect CMS Item Name Converter</title>
+</head>
+
+<body>
+    <main>
+        <div class="uk-section uk-section-primary">
+            <div class="uk-container uk-container-small">
+                <h1 class="uk-text-uppercase uk-text-center">Intersect CMS Item Name Converter</h1>
+            </div>
+        </div>
+
+        <div class="uk-margin-medium-top uk-text-center" id="preApp" hidden>
+            <button id="dellConvertButton" class="uk-button uk-button-danger uk-width-1-1" type="button" tabindex="-1" hidden>Delete All files</button>
+            <span uk-spinner="ratio: 4.5" id="loading"></span>
+            <p id="textPreApp"></p>
+        </div>
+
+
+        <div class="js-upload uk-width-1-1" uk-form-custom id="uploadButton" hidden>
+            <input id="upload" type="file" multiple class="uk-button uk-button-default uk-width-1-1">
+            <button class="uk-button uk-button-default uk-width-1-1" type="button" tabindex="-1">Select</button>
+        </div>
+        <button id="convertButton" class="uk-button uk-button-default uk-width-1-1" type="button" tabindex="-1" hidden>Convert All files</button>
+
+        <div id="mainContent" class="uk-container uk-container-small uk-margin-medium-top">
+            <p id="inProgress" hidden></p>
+            <div class="uk-margin-small-top">
+                <progress id="js-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
+            </div>
+            <ul class="uk-list uk-list-divider" id="listFiles"></ul>
+        </div>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.9.3/dist/js/uikit.min.js"></script>
+
+</html>
